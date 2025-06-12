@@ -2,10 +2,13 @@ import React from 'react'
 import style from './CostForm.module.scss'
 import { useState } from 'react'
 import { useContext } from 'react'
-import { CostContext } from '../../context'
+import { CostCategoriesContext } from '../../context'
+import {useDispatch, useSelector} from 'react-redux'
+import { costsAcions } from '../../redux/slices/costSlice'
 
 function CostForm() {
-    const {costs,setCosts,costcategories} = useContext(CostContext)
+    const costs = useSelector((state)=>state.costs);
+    const {costcategories} = useContext(CostCategoriesContext);
     const [newCost,setNewCoste] = useState({
         id : costs.length,
         name : "",
@@ -14,6 +17,7 @@ function CostForm() {
         desc :  "",
         date : ""
     })
+    const dispatch = useDispatch()
 
     
     const nameHandle = (e)=>{
@@ -35,14 +39,7 @@ function CostForm() {
 
     const formHandle = (e)=>{
         e.preventDefault();
-
-        setCosts((prev)=>{
-            return[...prev,newCost]
-        }) 
-
-        const data = JSON.parse(localStorage.getItem("Data"));
-        data.costs = [...data.costs,newCost];
-        localStorage.setItem("Data",JSON.stringify(data))
+        dispatch(costsAcions.addCostTransaction(newCost))
         
     }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import style from './TotalCounter.module.scss'
 import { useState } from 'react'
-import { CostContext } from '../../context';
 import { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring'
 

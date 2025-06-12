@@ -1,19 +1,23 @@
 import React from 'react'
 import style from './Card.module.scss'
 import { FaTrashAlt ,FaPencilAlt} from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { costsAcions } from '../../redux/slices/costSlice';
+import { incomeActions } from '../../redux/slices/incomeSlice';
 
 
 
-function Card({name,value,date,id,category,desc,isIncom,list,setList}) {
+function Card({name,value,date,id,category,desc,isIncom}) {
 
-
+    const dispatch = useDispatch()
 
   
   const removeHandel = ()=>{
-    const newIncomes = list.filter((income)=> income.id !== id);
-
-    console.log(newIncomes)
-    setList(newIncomes)
+    if(isIncom){
+        dispatch(incomeActions.removeIncomeTransaction(id))
+    }else{
+        dispatch(costsAcions.removeCostTransaction(id))
+    }
     
 
   }

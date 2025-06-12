@@ -2,10 +2,16 @@ import React from 'react'
 import style from './IncomeForm.module.scss'
 import { useState } from 'react'
 import { useContext } from 'react'
-import { IncomeContext } from '../../context'
+import { useDispatch, useSelector } from 'react-redux'
+import { incomeActions } from '../../redux/slices/incomeSlice'
+import { IncomeCategoriesContext } from '../../context'
 
 function IncomeForm() {
-    const {incomes,setIncomes,incomecategories} = useContext(IncomeContext)
+    const incomes = useSelector((state)=>state.incomes)
+    const dispatch = useDispatch()
+
+    const {incomecategories} = useContext(IncomeCategoriesContext)
+    
     const [newincom,setNewincome] = useState({
         id : incomes.length,
         name : "",
@@ -33,15 +39,7 @@ function IncomeForm() {
     }
     const formHandle = (e)=>{
         e.preventDefault();
-
-        setIncomes((prev)=>{
-            return[...prev,newincom]
-        })
-
-        const data = JSON.parse(localStorage.getItem("Data"));
-        data.incomes = [...data.incomes,newincom];
-        localStorage.setItem("Data",JSON.stringify(data))
-        
+        dispatch(incomeActions.addIncomeTransaction(newincom))
     }
 
   return (

@@ -7,7 +7,7 @@ import Filter from '../Fliter/Filter'
 import CostForm from '../CostForm/CostForm'
 
 
-function List({list,setList,categorieslist,isIncome}) {
+function List({list,categorieslist,isIncome}) {
 
   const [isformcliked , setIsformcliked] = useState(false)
   const [selectedCat,setSelectedCat] = useState("all")
@@ -64,7 +64,6 @@ function List({list,setList,categorieslist,isIncome}) {
                   desc={item.desc}
                   key={item.id}
                   list={list}
-                  setList={setList}
                 />
               ))
           }
