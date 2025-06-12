@@ -1,0 +1,32 @@
+.bar{
+    background-color: rgba(255, 255, 255, 0.199);
+    min-width: 100px;
+    min-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+.selected{
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+}
+
+.unselected{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 20px;
+        font-weight: 500;
+}
+
+@media (max-width:1000px) {
+        .bar{
+                flex-direction: row;
+                min-width: 90%;
+                min-height: 80px;
+        }
+}

@@ -1,0 +1,19 @@
+.layout{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: rgba(255, 255, 255, 0.938);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:870px) {
+    .layout{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}

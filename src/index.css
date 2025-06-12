@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    /* background: linear-gradient(66deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%) fixed; */
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#root {
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+.layout{
+    background-color: rgba(255, 255, 255, 0.938);
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1{
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+    h3{
+        padding-top: 0.5rem;
+        text-align: center;
+        width: 100px;
+        font-weight: 600;
+        font-size:large;
+    }
+}
+@media (max-width:870px) {
+    .layout{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}

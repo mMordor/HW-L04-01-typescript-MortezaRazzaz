@@ -1,0 +1,35 @@
+.wraper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.search{
+    width: 45%;
+    height: 2rem;
+    border-radius: 6px;
+    background-color: rgba(181, 160, 221, 0.568);
+    padding-left: 1rem;
+    font-weight: 500;
+    transition: ease 0.3s;
+    font-size: small;
+    &:hover{
+        background-color: rgba(22, 24, 173, 0.726);
+    }
+    &:focus{
+        color: white;
+        background-color: rgba(92, 40, 187, 0.726);
+    }
+}
+.options{   
+    width: 15%;
+    background-color: rgba(181, 160, 221, 0.568);
+    height: 2rem;
+    border: 1pxrgba(181, 160, 221, 0.568)solidrgba(181, 160, 221, 0.568)blueviolet;
+    border-radius: 6px;
+    transition: ease 0.3s;
+    &:hover{
+        color: white;
+        background-color: rgba(22, 24, 173, 0.726);
+    }
+}
