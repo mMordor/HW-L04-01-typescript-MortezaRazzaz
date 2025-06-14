@@ -7,9 +7,6 @@ import { IncomeCategoriesContext } from '../../context'
 import { useSelector } from 'react-redux'
 
 
-
-
-
 function IncomePage() {
  const incomes = useSelector((state)=>state.incomes)
  const {incomecategories} = useContext(IncomeCategoriesContext);

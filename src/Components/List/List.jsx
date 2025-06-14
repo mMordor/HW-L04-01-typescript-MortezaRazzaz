@@ -16,7 +16,7 @@ function List({list,categorieslist,isIncome}) {
   const addbtnhandl = ()=>{
     setIsformcliked(prev=>!prev)
   }
-  
+  console.log(list)
   const filteredlist = list.filter((item)=>
     (selectedCat === "all" || item.category === selectedCat) 
     && 
