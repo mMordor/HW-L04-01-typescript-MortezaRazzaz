@@ -1,7 +1,4 @@
-export const ADDINCOME = 'ADDINCOME';
-export const REMOVEINCOME = 'REMOVEINCOME';
-export const ADDCOST = 'ADDCOST';
-export const REMOVECOST = 'REMOVECOST';
+
 export const DATA = "Data";
 
 export type costs = {
