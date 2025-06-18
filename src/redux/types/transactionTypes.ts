@@ -25,21 +25,3 @@ export interface transactionStateType {
     incomes: incomes[];
 }
 
-interface AddIncomeAction {
-    type: typeof ADDINCOME;
-    payload: incomes;
-}
-interface RemoveIncomeAction {
-    type: typeof REMOVEINCOME;
-    payload: number;
-}
-interface AddCostAction {
-    type: typeof ADDCOST;
-    payload: costs;
-}
-interface RemoveCostAction {
-    type: typeof REMOVECOST;
-    payload: number;
-}
-
-export type transactionActionTypes = AddIncomeAction | RemoveIncomeAction | AddCostAction | RemoveCostAction;
