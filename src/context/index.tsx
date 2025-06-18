@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { SetStateAction } from 'react'
 import { useState } from 'react';
 import { createContext } from "react";
+import { Dispatch } from 'redux';
 
-const IncomeCategoriesContext = createContext();
-const CostCategoriesContext = createContext();
+
+const IncomeCategoriesContext = createContext<any>([]);
+const CostCategoriesContext = createContext<any>([]);
 
 function LayContextsProvider({children}) {
 

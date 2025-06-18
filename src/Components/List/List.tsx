@@ -57,13 +57,11 @@ function List({list,categorieslist,isIncome}) {
               :
               filteredlist.map((item)=>(
                 <Card isIncom={isIncome}
-                  setisformclicked={setIsformcliked}
                   id={item.id} name={item.name}
                   value={item.value} date={item.date}
                   category={item.category}
                   desc={item.desc}
                   key={item.id}
-                  list={list}
                 />
               ))
           }

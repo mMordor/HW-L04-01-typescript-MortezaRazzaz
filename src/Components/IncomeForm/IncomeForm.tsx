@@ -3,12 +3,13 @@ import style from './IncomeForm.module.scss'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { incomeActions } from '../../redux/slices/incomeSlice'
 import { IncomeCategoriesContext } from '../../context'
+import { AppDispatch, RootState } from '../../redux'
+import { transactionActions } from '../../redux/slices/transactionSlice'
 
 function IncomeForm() {
-    const incomes = useSelector((state)=>state.incomes)
-    const dispatch = useDispatch()
+    const incomes = useSelector((state:RootState)=>state.incomes)
+    const dispatch = useDispatch<AppDispatch>()
 
     const {incomecategories} = useContext(IncomeCategoriesContext)
     
@@ -39,7 +40,7 @@ function IncomeForm() {
     }
     const formHandle = (e)=>{
         e.preventDefault();
-        dispatch(incomeActions.addIncomeTransaction(newincom))
+        dispatch(transactionActions.addIncome(newincom))
     }
 
   return (

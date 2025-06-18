@@ -1,3 +1,4 @@
+import React from 'react'
 import {createBrowserRouter} from 'react-router-dom'
 import Layout from '../Pages/Layout/Layout'
 import IncomePage from '../Pages/IncomePage/IncomePage'

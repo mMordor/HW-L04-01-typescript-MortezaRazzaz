@@ -5,10 +5,11 @@ import TotalCounter from '../../Components/TotalCounter/TotalCounter'
 import { useContext } from 'react'
 import { IncomeCategoriesContext } from '../../context'
 import { useSelector } from 'react-redux'
+import { RootState } from '../../redux'
 
 
 function IncomePage() {
- const incomes = useSelector((state)=>state.incomes)
+ const incomes = useSelector((state:RootState)=>state.incomes)
  const {incomecategories} = useContext(IncomeCategoriesContext);
 
   return (

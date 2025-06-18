@@ -5,9 +5,10 @@ import { useContext } from 'react'
 import { CostCategoriesContext } from '../../context'
 import List from '../../Components/List/List'
 import { useSelector } from 'react-redux'
+import { RootState } from '../../redux'
 
 function CostPage() {
-  const costs = useSelector((state)=>state.costs)
+  const costs= useSelector((state:RootState)=>state.costs)
   const {costcategories} = useContext(CostCategoriesContext);
   return (
     <>
